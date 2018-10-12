@@ -17,28 +17,33 @@ h2{
 	line-height: 22px;
 	text-align: left;
 	margin: 20px 0px 20px 20px;
+	color: black;
 }
 
 p{
 	text-align: left;
+	color: black;
+}
+
+.active a{
+	text-decoration: underline;
 }
 
 .page{
 	display: grid;
-	grid-template-columns: auto auto auto;
 	grid-template-areas: 	'logo header header'
 							'main main maintext'
 							'conta contb contc'
 							'footer footer footer';
 	grid-gap: 0px;
-	background-color: blue;
+/*	background-color: blue;*/
 	width: 1100px;
 	margin: 0px auto;
 }
 
 .page div{
 	text-align: center;
-	padding: 5px;
+	/*padding: 5px;*/
 	background-color: white;
 }
 
@@ -68,7 +73,7 @@ p{
 }
 
 .main img{
-	padding: 10px 0px 80px 0px;
+	/*padding: 10px 0px 80px 0px;*/
 }
 
 .maintext{
@@ -86,36 +91,7 @@ p{
 	margin-right: 10px;
 }
 
-.content1{
-	color: black;
-	grid-area: conta;
-}
 
-.content2{
-	color: black;
-	grid-area: contb;
-}
-
-.content3{
-	color: black;
-	grid-area: contc;
-}
-
-.content1 p{
-	margin: 0px 20px 0px 20px;
-}
-
-.content2 p{
-	margin: 0px 20px 0px 20px;
-}
-
-.content3 p{
-	margin: 0px 20px 0px 20px;
-}
-
-ul{
-	text-align: left;
-}
 
 .footer{
 	grid-area: footer;
