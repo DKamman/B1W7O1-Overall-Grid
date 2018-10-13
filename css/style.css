@@ -1,104 +1,109 @@
 body{
-	margin: 0px;
 	font-family: 'Lato', sans-serif;
+	margin: 0;
 	font-size: 14px;
 	line-height: 20px;
-	color: white;
 }
 
 h1{
-	font-size: 26px;
-	line-height: 30px;
 	text-align: left;
+	font-size: 26;
+	line-height: 30px;
+	margin-right: 10px;
+	margin-top: 30px;
+	color: white;
 }
 
 h2{
+	text-align: left;
+	margin-left: 30px;
+	margin-right: 30px;
 	font-size: 20px;
 	line-height: 22px;
-	text-align: left;
-	margin: 20px 0px 20px 20px;
-	color: black;
 }
 
-p{
-	text-align: left;
-	color: black;
-}
-
-.active a{
-	text-decoration: underline;
-}
-
-.page{
-	display: grid;
-	grid-template-areas: 	'logo header header'
-							'main main maintext'
-							'conta contb contc'
-							'footer footer footer';
-	grid-gap: 0px;
-/*	background-color: blue;*/
+.grid{
 	width: 1100px;
-	margin: 0px auto;
+	margin: 0 auto;
+	text-align: center;
+	display: grid;
+	grid-template-columns: auto auto 366.666px; /*Door grid-template-columns te gebruiken met een vaste pixel waarde voor de rechter kolom krijg ik het symmetrisch. ipv grid-template-areas te gebruiken, waarbij het niet lukte*/
+
+/*	grid-gap: 5px;
+	background-color: red;*/
 }
 
-.page div{
-	text-align: center;
-	/*padding: 5px;*/
-	background-color: white;
+.grid div{
+	/*background-color: lightblue;*/
 }
 
 .logo{
-	grid-area: logo;
 	background-image: url("../img/header_bg.png");
+	padding-top: 10px;
+	height: 105px;
 }
 
-.topbanner {
-	grid-area: header;
+.nav{
+	grid-column: 2 / span 2;
 	background-image: url("../img/header_bg.png");
+	padding-top: 45px;
 }
 
-.topbanner nav{
-	margin: 40px;
+.nav a{
+	text-decoration: none;
+	color: black;
+	margin-left: 30px;
 }
 
-.topbanner a{
-	margin-left: 40px;
+a.active{
+	text-decoration: underline;
+}
+
+.banner{
+	grid-column: 1 / span 2;
+	background-image: url("../img/banner_bg.png");
+	height: 425px;
+}
+
+.banner img{
+	margin-top: 20px; 
+	margin-bottom: 20px;
+}
+
+.maintext{
+	background-image: url("../img/banner_bg.png");
+}
+
+.maintext p{ 
+	
+	margin-right: 45px;
+	text-align: left;
+	color: white;
+}
+
+.cont{
+	padding-top: 20px;
+}
+
+.cont p{
+	margin-right: 30px;
+	margin-left: 30px;
+	text-align: left;
+}
+
+.cont ul{
+	text-align: left;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.cont a{
 	text-decoration: none;
 	color: black;
 }
 
-.main{
-	grid-area: main;
-	background-image: url("../img/banner_bg.png");
-}
-
-.main img{
-	/*padding: 10px 0px 80px 0px;*/
-}
-
-.maintext{
-	grid-area: maintext;
-	background-image: url("../img/banner_bg.png");
-/*	width: 363.333px;*/ /*deze width zet het enigzins symmetrisch ten opzichte van hoe het eruit ziet zonder deze width*/
-}
-
-.maintext h1{
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.maintext p{
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-
-
 .footer{
-	grid-area: footer;
+	grid-column: 1 / span 3;
 	background-image: url("../img/footer_bg.png");
-}
-
-.footer p{
-	text-align: center;
+	color: white;
 }
