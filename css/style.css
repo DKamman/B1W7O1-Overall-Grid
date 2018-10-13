@@ -79,6 +79,7 @@ p{
 .maintext{
 	grid-area: maintext;
 	background-image: url("../img/banner_bg.png");
+/*	width: 363.333px;*/ /*deze width zet het enigzins symmetrisch ten opzichte van hoe het eruit ziet zonder deze width*/
 }
 
 .maintext h1{
